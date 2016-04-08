@@ -25,9 +25,9 @@ grunt 前端整体打包方案及Grunt打造前端自动化工作流
   
   grunt build
 
-参考学习的地址
-
-  http://gruntjs.com/getting-started#package.json
+    参考学习的地址
   
-  http://tgideas.qq.com/webplat/info/news_version3/804/808/811/m579/201307/216460.shtml
+    http://gruntjs.com/getting-started#package.json
+    
+    http://tgideas.qq.com/webplat/info/news_version3/804/808/811/m579/201307/216460.shtml
   
