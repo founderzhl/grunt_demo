@@ -1,7 +1,5 @@
 /*
  * Creator: zhl20160408
- * $Author$
- * $Date$
  */
 (function(){
 

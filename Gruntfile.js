@@ -1,4 +1,5 @@
 /*----------------------------------------------------
+ * zhl 20160408
  * livereload Default Setting
  *-----------------------------------------------------*/
 'use strict';
@@ -80,7 +81,7 @@ module.exports = function(grunt) {
 
 		/* S [Task liverload] --------------------------------------------------------------------------*/
 		livereload: {
-			port: 35729 // Default livereload listening port.
+			port: 2222 // Default livereload listening port.35729
 		},
 		connect: {
 			livereload: {
