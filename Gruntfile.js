@@ -57,7 +57,7 @@ module.exports = function(grunt) {
 			},*/
 			with_banner: {
 				options: {
-					banner: '/* projA Css files by Sonic */'
+					banner: '/* grunt_demo Css files by Sonic */'
 				},
 				files: {
 					'dist/css/combo.css': ['src/css/base.css','src/css/index.css']
