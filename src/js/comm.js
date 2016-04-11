@@ -1,5 +1,7 @@
 /*
- * Creator: zhl20160408
+ * Creator: Sonic
+ * $Author$
+ * $Date$
  */
 (function(){
 

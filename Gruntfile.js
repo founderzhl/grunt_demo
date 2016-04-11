@@ -1,14 +1,7 @@
 /*----------------------------------------------------
- * zhl 20160408
- * livereload Default Setting
+ * zhl20160411 grunt\connect
  *-----------------------------------------------------*/
 'use strict';
-var path = require('path');
-var lrSnippet = require('grunt-contrib-livereload/lib/utils').livereloadSnippet;
-
-var folderMount = function folderMount(connect, point) {
-  return connect.static(path.resolve(point));
-};
 
 /*----------------------------------------------------
  * Module Setting
@@ -58,7 +51,7 @@ module.exports = function(grunt) {
 			},*/
 			with_banner: {
 				options: {
-					banner: '/* grunt_demo Css files by Sonic */'
+					banner: '/* projA Css files by Sonic */'
 				},
 				files: {
 					'dist/css/combo.css': ['src/css/base.css','src/css/index.css']
@@ -79,36 +72,37 @@ module.exports = function(grunt) {
 			}
 		},
 
-		/* S [Task liverload] --------------------------------------------------------------------------*/
-		livereload: {
-			port: 2222 // Default livereload listening port.35729
-		},
-		connect: {
-			livereload: {
-				options: {
-					port: 9001,
-					middleware: function(connect, options) {
-						return [lrSnippet, folderMount(connect, options.base)]
-					}
-				}
+		/*[Connect] --------------------------------------------------------------------------*/
+		 connect: {
+		  options: {
+			  port: 9000,
+			  open: true,
+			  livereload: 35729,
+			  // Change this to '0.0.0.0' to access the server from outside
+			  hostname: 'localhost'
+		  },
+		  server: {
+			options: {
+			  port: 9001,
+			  base: 'dist/html/'
 			}
+		  }
 		},
 		// Configuration to be run (and then tested)
 		regarde: {
 			html: {
 				files: 'src/**/*.html',
-				tasks: ['livereload']
+				tasks: ['connect']
 			},
 			css:{
 				files: 'src/css/*.css',
-				tasks: ['livereload']
+				tasks: ['connect']
 			},
 			js:{
 				files: 'src/js/*.js',
-				tasks: ['livereload']
+				tasks: ['connect']
 			}
 		}
-		/* E--------------------------------------------------------------------------*/
 
 	});
 
@@ -120,9 +114,9 @@ module.exports = function(grunt) {
 	// Build task(s).
 	grunt.registerTask('build', ['htmlmin', 'uglify', 'cssmin', 'imagemin']);
 
-	/* [liverload plugin & task ] ---------------*/
+	/* [connect & task ] ---------------*/
 	grunt.loadNpmTasks('grunt-regarde');
 	grunt.loadNpmTasks('grunt-contrib-connect');
-	grunt.loadNpmTasks('grunt-contrib-livereload');
-	grunt.registerTask('live', ['livereload-start', 'connect', 'regarde']);
+	grunt.loadNpmTasks('grunt-contrib-watch');
+	grunt.registerTask('live', ['connect', 'regarde']);
 };

@@ -13,7 +13,7 @@ grunt 前端整体打包方案及Grunt打造前端自动化工作流
   
   npm install
 
-3. 启动文件变更监控(livereload)
+3. 连接运行的服务(connect)
 
   命令行执行:
   
