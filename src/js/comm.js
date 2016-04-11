@@ -1,15 +1,13 @@
 /*
- * Creator: Sonic
- * $Author$
- * $Date$
+ * zhl20160411
  */
 (function(){
 
-	document.write('<p>------come from js file-----</p>');
-	document.write('<p>------come from js file-----</p>');
-	document.write('<p>------come from js file-----</p>');
-	document.write('<p>------come from js file-----</p>');
-	document.write('<p>------come from js file-----</p>');
-	document.write('<p>------come from js file-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
+	document.write('<p>-------hello world! zhltest-----</p>');
 
 })()
